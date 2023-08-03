@@ -1,4 +1,4 @@
-const APIKEY = "015a49e1ee86b6c2d96c402a9c4dcfa7";
+const APIKEY = "7e17aa7645b6a83f754930dd42c5ca79";
 let units = "imperial";
 let units_temp = `&deg;F`;
 let units_humid = `%`;
@@ -9,12 +9,12 @@ let owmWeather = new OWMWeather(APIKEY, units);
 let owmForecast = new OWMForecast(APIKEY, units);
 let owmPollution = new OWMPollution(APIKEY);
 
-const coolClothing = ["wife-beaters", "t-shirts", "shorts", ]
-const coolFootwear = ["flip-flops", "sneakers", ]
-const hotClothing = ["long-johns", ""]
-const hotFootwear = ["slippers"]
-const hotItems = []
-const coolItems = []
+const coolClothing = ["wife-beaters", "dri-fit t-shirts", "sports-shorts", "khaki-shorts", "cotton t-shirts", "garbage bag", "polo shirt", "cargo shorts"]
+const coolFootwear = ["flip-flops", "sneakers", "sandals", "dress shoes", ]
+const hotClothing = ["long-johns", "Jacket", "long-sleeve shirt", "jeans", "sweatpants", ]
+const hotFootwear = ["slippers", "boots", "combat boots", "sneakers", "shoes", "dress shoes"]
+const hotItems = ["rubber duck", "umbrella", "portable ac", "phone", "airpods", "watch", "belt", "sunhat"]
+const coolItems = ["notebook", "airpods", "socks", "watch", "gloves", "hat", "scarf", "phone", ""]
 
 ///////////////////////////////////////////////////////////////
 // LOCATION - translate from city, state, country to lat/lon //
@@ -47,9 +47,6 @@ function displayWeather() {
     const condIdURL = "https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2";
     let condId = owmWeather.json.weather[0].id;
     let condIdReport = `The condition ID is ${condId} which can <a href=${condIdURL} target="_blank">help sort by possible conditions</a>.`;
-    if (condID = 800) {
-        apparel.this = "Wear "
-    }
 
     // Temperature and Feels-Like
     let temp = owmWeather.json.main.temp;
@@ -62,20 +59,27 @@ function displayWeather() {
     let img = `<img src="https://openweathermap.org/img/wn/${owmWeather.json.weather[0].icon}@4x.png">`;
 
     //Apparel Informere
-    let apparel1 = apparel1.this
-    let apparel2 = apparel2.this
+    let apparel;
+    let apparel1;
+    let apparel2;
     apparel1 = coolClothing[Math.floor(Math.random() * 7)];
     apparel2 = coolClothing[Math.floor(Math.random() * 7)];
-    footwear1 = 
-    item1 = 
-    item2 = 
-    apparel3 = hotClothing[Math.floor(Math.random() * 7)]
-    apparel4 = hotClothing[Math.floor(math.random() * 7)]
-    item3 =
-    item4 =
-    footwear2 = 
-    if (owmWeather.json.main.feels_like > 50 && owmWeather.json.main.feels_like < 80) {
-        
+    footwear1 = coolFootwear[Math.floor(Math.random() * 7)];
+    item1 = coolItems[Math.floor(Math.random() * 7)];
+    item2 = coolItems[Math.floor(Math.random() * 7)];
+    apparel3 = hotClothing[Math.floor(Math.random() * 7)];
+    apparel4 = hotClothing[Math.floor(Math.random() * 7)];
+    item3 = hotItems[Math.floor(Math.random() * 7)];
+    item4 = hotItems[Math.floor(Math.random() * 7)];
+    footwear2 = hotFootwear[Math.floor(Math.random() * 7)];
+    if (owmWeather.json.main.feels_like >= 60 && owmWeather.json.main.feels_like < 110) {
+        apparel = `You should wear ${apparel1} and ${apparel2} today due to the conditions outside. Don't forget to bring ${footwear1} and a(n) ${item1}, as well as a(n) ${item2}`
+    }
+    else if (owmWeather.json.main.feels_like > 0 && owmWeather.json.main.feels_like < 60) {
+        apparel = `You should wear ${apparel3} and ${apparel4} today due to the conditionis outside. Don't forget to bring ${footwear2} and a(n) ${item3}, as well as a(n) ${item4}`
+    }
+    else {
+        apparel = `Error.`
     }
 
 

@@ -1,8 +1,8 @@
 body {
-    background-color: #1f001f;
+    background-color: dodgerblue;
 }
 
-h2, p {
+h1, p, h2 {
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
