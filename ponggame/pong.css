@@ -1,0 +1,43 @@
+body {
+    z-index: 0;
+    text-align: center;
+    overflow: hidden;
+    background-image: url("https://media.istockphoto.com/id/1027574566/photo/dark-wood-background-with-vertical-grain.jpg?s=170667a&w=0&k=20&c=I69newxcTESDTlLVeqsWPEIBR8W8w8T31DOzh58iS_w=");
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60px;
+    color: white;
+}
+h2 {
+    font-family: "Courier New";
+    color: white;
+}
+p {
+    color: white;
+}
+
+#scoreboard {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: black;
+}
+
+#reset {
+    cursor: pointer;
+    border-radius: 15px;
+    width: 100px;
+    height: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#gameboard {
+    background-color: black;
+}
+
+#reset {
+    font-weight: bold;
+    color: black;
+}

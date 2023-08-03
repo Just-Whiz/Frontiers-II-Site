@@ -1,0 +1,32 @@
+body {
+    background-color: dodgerblue;
+    color: white;
+    font-family: arial;
+}
+
+.inputfield1, .inputfield2 {
+    padding: 10px;
+    border: 3px solid grey;
+}
+
+.inputfield1 {
+    text-align: left;
+    flex: 50%
+}
+
+.inputfield2 {
+    text-align: right;
+    flex: 50%;
+}
+.buttons {
+    padding: 10px;
+    border: 3px solid grey;
+    
+}
+
+.buttons:hover {
+    background-color: navajowhite
+}
+p#bottompara {
+    font-weight: bold;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong</title>
+    <link rel="stylesheet" href="pong.css">
+</head>
+<body>
+    <div id="pongcontainer">
+        <h1>classic pong</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <canvas id="gameboard" style="outline: yellow 100px solid; border-radius: 5px;"></canvas>
+        <div id="scoreboard">0 : 0</div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button id="reset" class="add-outline" onclick="resetGame()">RESET</button>
+        <br />
+        <input type="checkbox" id="cpucheck">
+        <br/>
+        <br>
+        <br>
+        <label>CPU Play</label>
+
+        <h2>How do I play?</h2>
+        <p> Use the paddles to make sure the ball doesn't leave the screen.
+            The Player on the left uses the W and S keys, and the player on the right uses the up and down arrow keys.</p>
+            <p>
+                If another player is losing, then a buff will be given to losing player.
+            </p>
+        <script src="Ball.js"></script>
+        <script src="Paddle.js"></script>
+        <script src="pong.js"></script>
+        <script src="controls.js"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris &amp; Ben's Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <h1>Calculator</h1>
+    <h3>How does it work?</h2>
+    <p>This calculator uses HTML to structure this page, CSS to style everything and make it look nice (such as the spacing that you see from the padding), and JavaScript behind the scenes to </p>
+<div class="inputfields">
+    <input type="number" id="input1" class="inputfield1" placeholder="Enter your 1st value here...">
+    <input type="number" id="input2" class="inputfield2" placeholder="Enter your 2nd value here...">
+<div>
+    <br> 
+    <br>
+<div>
+    <button onclick="add()" class="buttons">Addition (+)</button>
+    <button onclick="subtract()" class="buttons">Subtract (-)</button>
+    <button onclick="multiply()" class="buttons">Multiply (*)</button>
+    <button onclick="divide()" class="buttons">Divide (/)</button>
+</div>
+<p id="bottompara">History: </p>
+    <p id="report"></p>
+    <script src="calculator.js"></script>
+</body>
+</html>
